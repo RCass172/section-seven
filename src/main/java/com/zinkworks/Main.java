@@ -13,5 +13,11 @@ public class Main {
         thePC.getMonitor().drawPixelAt(1500, 1200, "red" );
         thePC.getMotherboard().loadProgram("Windows 1.0");
         thePC.getTheCase().pressPowerButton();
+
+        Printer printer = new Printer(50, true);
+        System.out.println("Initial page count = " + printer.getPages());
+        int pagesPrinted = printer.print(9);
+        System.out.println("Printed " + pagesPrinted + " pages");
+
     }
 }
